@@ -21,6 +21,19 @@ public class Employee {
     private double salary;
     private LocalDate joiningDate;
     private String password;
+    
+	public Employee(int id, String name, String email, String phone, String department, double salary,
+			LocalDate joiningDate, String password) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.phone = phone;
+		this.department = department;
+		this.salary = salary;
+		this.joiningDate = joiningDate;
+		this.password = password;
+	}
 	public int getId() {
 		return id;
 	}
