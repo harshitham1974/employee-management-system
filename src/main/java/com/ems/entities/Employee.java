@@ -6,13 +6,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.SequenceGenerator;
 
 @Entity
 public class Employee {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO,generator = "emp_seq")
-	@SequenceGenerator(name = "emp_seq",initialValue = 1,allocationSize = 1)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
     private String name;
     private String email;
@@ -21,6 +19,22 @@ public class Employee {
     private double salary;
     private LocalDate joiningDate;
     private String password;
+    
+    public Employee() {
+    	
+	}
+	public Employee(int id, String name, String email, String phone, String department, double salary,
+			LocalDate joiningDate, String password) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.phone = phone;
+		this.department = department;
+		this.salary = salary;
+		this.joiningDate = joiningDate;
+		this.password = password;
+	}
 	public int getId() {
 		return id;
 	}
