@@ -43,5 +43,33 @@ public class EmployeeDAO {
 	            entityManager.close();
 	        }
 	    }
+	 public boolean existsByEmail(String email) {
+
+		    EntityManager em = JPAUtil.getEntityManager();
+
+		    String jpql = "SELECT e FROM Employee e WHERE e.email=:email";
+
+		    TypedQuery<Employee> query =
+		            em.createQuery(jpql, Employee.class);
+
+		    query.setParameter("email", email);
+
+		    try {
+
+		        query.getSingleResult();
+
+		        return true;
+
+		    } catch (NoResultException e) {
+
+		        return false;
+
+		    } finally {
+
+		        em.close();
+
+		    }
+
+		}
 
 }

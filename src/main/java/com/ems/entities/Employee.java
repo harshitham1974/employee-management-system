@@ -22,6 +22,9 @@ public class Employee {
     private LocalDate joiningDate;
     private String password;
     
+    public Employee() {
+    	
+	}
 	public Employee(int id, String name, String email, String phone, String department, double salary,
 			LocalDate joiningDate, String password) {
 		super();
