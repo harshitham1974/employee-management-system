@@ -7,7 +7,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-<<<<<<< HEAD
 import javax.servlet.http.HttpSession;
 
 import com.ems.dao.AdminDAO;
@@ -76,14 +75,4 @@ public class LoginServlet extends HttpServlet {
     }
 
 }
-=======
 
-@WebServlet("/login")
-public class LoginServlet extends HttpServlet {
-
-	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		super.doPost(req, resp);
-	}
-}
->>>>>>> branch 'main' of https://github.com/harshitham1974/employee-management-system
