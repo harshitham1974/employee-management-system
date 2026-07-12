@@ -44,7 +44,7 @@ if(admin == null){
 Add Employee
 </a>
 
-<a href="#" class="btn btn-primary">
+<a href="viewEmployees" class="btn btn-primary">
 View Employees
 </a>
 

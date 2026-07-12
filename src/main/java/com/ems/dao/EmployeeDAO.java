@@ -1,5 +1,7 @@
 package com.ems.dao;
 
+import java.util.List;
+
 import com.ems.entities.Employee;
 import com.ems.util.JPAUtil;
 
@@ -25,8 +27,7 @@ public class EmployeeDAO {
 	}
 
 	 public Employee findByEmail(String email) {
-
-	        EntityManager entityManager = JPAUtil.getEntityManager();
+		 EntityManager entityManager = JPAUtil.getEntityManager();
 
 	        String jpql = "SELECT e FROM Employee e WHERE e.email = :email";
 
@@ -42,6 +43,8 @@ public class EmployeeDAO {
 	        } finally {
 	            entityManager.close();
 	        }
+
+	        
 	    }
 	 public boolean existsByEmail(String email) {
 
@@ -69,6 +72,67 @@ public class EmployeeDAO {
 		        em.close();
 
 		    }
+
+		}
+	 
+	 public List<Employee> getAllEmployees() {
+		 EntityManager em = JPAUtil.getEntityManager();
+
+		    String jpql = "FROM Employee";
+
+		    TypedQuery<Employee> query = em.createQuery(jpql, Employee.class);
+
+		    List<Employee> employees = query.getResultList();
+
+		    em.close();
+
+		    return employees;
+		}
+	 public Employee findById(int id) {
+
+		    EntityManager em = JPAUtil.getEntityManager();
+
+		    Employee employee = em.find(Employee.class, id);
+
+		    em.close();
+
+		    return employee;
+
+		}
+	 public void update(Employee employee) {
+
+		    EntityManager em = JPAUtil.getEntityManager();
+
+		    EntityTransaction et = em.getTransaction();
+
+		    et.begin();
+
+		    em.merge(employee);
+
+		    et.commit();
+
+		    em.close();
+
+		}
+	 public void delete(int id) {
+
+		    EntityManager em = JPAUtil.getEntityManager();
+
+		    EntityTransaction et = em.getTransaction();
+
+		    et.begin();
+
+		    Employee employee = em.find(Employee.class, id);
+
+		    if(employee != null) {
+
+		        em.remove(employee);
+
+		    }
+
+		    et.commit();
+
+		    em.close();
 
 		}
 
