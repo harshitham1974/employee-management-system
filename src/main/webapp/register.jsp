@@ -26,26 +26,27 @@
 
 <div class="card-body">
 
-<<<<<<< HEAD
+<!-- Error Message -->
 <%
 if(request.getAttribute("error") != null){
 %>
 
-<h5 style="color:red;text-align:center;">
-<%= request.getAttribute("error") %>
-</h5>
+<div class="alert alert-danger text-center">
+    <%= request.getAttribute("error") %>
+</div>
 
 <%
 }
 %>
 
+<!-- Success Message -->
 <%
 if(request.getAttribute("success") != null){
 %>
 
-<h5 style="color:green;text-align:center;">
-<%= request.getAttribute("success") %>
-</h5>
+<div class="alert alert-success text-center">
+    <%= request.getAttribute("success") %>
+</div>
 
 <%
 }
@@ -101,58 +102,6 @@ if(request.getAttribute("success") != null){
 Already have an account?
 
 <a href="employee-login.jsp">Login</a>
-=======
-<form action="register" method="post">
-
-<div class="mb-3">
-<label>Name</label>
-<input type="text" class="form-control" name="name" required>
-</div>
-
-<div class="mb-3">
-<label>Email</label>
-<input type="email" class="form-control" name="email" required>
-</div>
-
-<div class="mb-3">
-<label>Phone</label>
-<input type="text" class="form-control" name="phone" required>
-</div>
-
-<div class="mb-3">
-<label>Department</label>
-<input type="text" class="form-control" name="department" required>
-</div>
-
-<div class="mb-3">
-<label>Joining Date</label>
-<input type="date" class="form-control" name="joiningDate" required>
-</div>
-
-<div class="mb-3">
-<label>Password</label>
-<input type="password" class="form-control" name="password" required>
-</div>
-
-<div class="mb-3">
-<label>Confirm Password</label>
-<input type="password" class="form-control" name="confirmPassword" required>
-</div>
-
-<div class="text-center">
-<button class="btn btn-primary">Register</button>
-</div>
-
-</form>
-
-</div>
-
-<div class="card-footer text-center">
-
-Already have an account?
-
-<a href="login.jsp">Login</a>
->>>>>>> branch 'main' of https://github.com/harshitham1974/employee-management-system
 
 </div>
 

@@ -51,13 +51,13 @@ body{
 
 <br>
 
-<a href="register.jsp" class="btn btn-success btn-lg m-3">
+<a href="employee-login.jsp" class="btn btn-success btn-lg m-3">
 <i class="bi bi-person"></i> Employee Login
 </a>
 
 <br>
 
-<a href="employee-login.jsp" class="btn btn-primary btn-lg m-3">
+<a href="register.jsp" class="btn btn-primary btn-lg m-3">
 <i class="bi bi-person-plus"></i> Employee Registration
 </a>
 

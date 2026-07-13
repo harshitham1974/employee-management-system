@@ -32,7 +32,7 @@ public class LoginServlet extends HttpServlet {
 
         HttpSession session = request.getSession();
 
-        if (role.equals("admin")) {
+        if ("admin".equals(role)) {
 
             Admin admin = adminDAO.findByEmail(email);
 
@@ -44,7 +44,7 @@ public class LoginServlet extends HttpServlet {
 
             } else {
 
-                request.setAttribute("error", "Invalid Email or Password");
+                request.setAttribute("error", "Invalid Email or Password. Please try again.");
 
                 request.getRequestDispatcher("admin-login.jsp")
                         .forward(request, response);
@@ -63,7 +63,7 @@ public class LoginServlet extends HttpServlet {
 
             } else {
 
-                request.setAttribute("error", "Invalid Email or Password");
+                request.setAttribute("error", "Invalid Email or Password. Please try again.");
 
                 request.getRequestDispatcher("employee-login.jsp")
                         .forward(request, response);

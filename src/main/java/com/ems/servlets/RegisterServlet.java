@@ -51,7 +51,7 @@ public class RegisterServlet extends HttpServlet {
 	     
 	     req.setAttribute("success","Registration Successful. Please Login.");
 	     
-	     req.getRequestDispatcher("login.jsp").forward(req, resp);
+	     req.getRequestDispatcher("employee-login.jsp").forward(req, resp);
 	        
 	}
 

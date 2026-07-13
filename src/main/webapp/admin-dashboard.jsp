@@ -40,10 +40,6 @@ if(admin == null){
 
 <hr>
 
-<a href="#" class="btn btn-success">
-Add Employee
-</a>
-
 <a href="viewEmployees" class="btn btn-primary">
 View Employees
 </a>
