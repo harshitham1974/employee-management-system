@@ -79,8 +79,8 @@ if(employee == null){
 
 </table>
 
-<a href="#" class="btn btn-warning">
-Edit Profile
+<a href="editProfile" class="btn btn-warning">
+    Edit Profile
 </a>
 
 <a href="logout" class="btn btn-dark">

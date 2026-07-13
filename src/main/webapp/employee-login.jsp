@@ -21,8 +21,8 @@
 
 <div class="card shadow">
 
-<div class="card-header text-center">
-<h3>Employee Login</h3>
+<div class="card-header bg-success text-white text-center">
+    <h3>Employee Login</h3>
 </div>
 
 <div class="card-body">
@@ -67,8 +67,8 @@ if(request.getAttribute("success") != null){
 
 <div class="text-center">
 
-<button class="btn btn-primary">
-Login
+<button class="btn btn-success w-100">
+    Login
 </button>
 
 </div>
@@ -79,13 +79,15 @@ Login
 
 <div class="text-center">
 
-Don't have an account?
+    Don't have an account?
 
-<a href="register.jsp">
+    <a href="register.jsp">Register Here</a>
 
-Register Here
+    <br><br>
 
-</a>
+    <a href="index.jsp" class="btn btn-secondary btn-sm">
+        Back to Home
+    </a>
 
 </div>
 
