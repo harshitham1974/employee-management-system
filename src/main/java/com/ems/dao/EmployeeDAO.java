@@ -135,5 +135,32 @@ public class EmployeeDAO {
 		    em.close();
 
 		}
+	 public void updateOwnDetails(Employee employee) {
+
+		    EntityManager em = JPAUtil.getEntityManager();
+		    EntityTransaction et = em.getTransaction();
+
+		    try {
+
+		        et.begin();
+
+		        em.merge(employee);
+
+		        et.commit();
+
+		    } catch (Exception e) {
+
+		        if (et.isActive()) {
+		            et.rollback();
+		        }
+
+		        e.printStackTrace();
+
+		    } finally {
+
+		        em.close();
+
+		    }
+		}
 
 }
